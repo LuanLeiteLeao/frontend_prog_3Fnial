@@ -46,9 +46,6 @@ export abstract class Buscar<Entidade> extends React.Component<
           <button onClick={this.pesquisarEntidade} value={data.pk}>
             {data.nome}
           </button>
-          {/* <a onClick={this.pesquisarEntidade} href={data.pk}>
-            {data.nome}
-          </a> */}
         </li>
       );
     });
