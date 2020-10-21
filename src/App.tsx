@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React, { Component } from "react";
+import { IGame } from "./interfaces/IGame";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface IProps {}
+interface IState {
+  games: Array<IGame>;
+}
+
+class App extends Component<IProps, IState> {
+  async componentDidMount() {
+    axios
+      .get("api?casoDeUso=ManterGame", {
+        headers: { "Access-Control-Allow-Origin": "*" },
+      })
+      .then((res) => {
+        console.log(res.data);
+
+        this.setState({ games: res.data });
+      })
+      .catch(() => console.log("erro:erro"));
+  }
+
+  render() {
+    // this.componentDidMount();
+    // const { games } = this.state;
+    // console.log(this.state.games);
+
+    return (
+      <></>
+      // <div>
+      //   <h1>Listar os Filmes</h1>
+      //   {filmes.map((filme) => (
+      //     <li key={filme.id}>
+      //       <h2>
+      //         <strong>Título: </strong>
+      //         {filme.name}
+      //       </h2>
+      //       <p>{filme.url}</p>
+      //     </li>
+      //   ))}
+      // </div>
+    );
+  }
 }
 
 export default App;
