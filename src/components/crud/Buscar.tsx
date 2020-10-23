@@ -154,7 +154,7 @@ export abstract class Buscar<Entidade> extends React.Component<
 
           <ul id="myUL">{this.MontarResultadoSemelhantesDigitado()}</ul>
 
-          <div style={{ margin: "20px" }}>
+          <div style={{ marginTop: "20px" }}>
             <Table striped bordered hover size="sm" variant="light">
               <thead>{this.colTabale()}</thead>
               <tbody>{this.getCamposCol()}</tbody>

@@ -40,11 +40,13 @@ export class CardGames extends React.Component<IProps, IState> {
         ></iframe>
         <Card.Body>
           <Card.Title>
-            <h1>{game.nome}</h1>
+            <h1 style={{ color: "#6a717c" }}>{game.nome}</h1>
           </Card.Title>
+
           <h5>Criação: {game.criacao}</h5>
           <h5>Data de Lançamento: {game.dataLancamento}</h5>
           {/* {game.generos} */}
+          <h3>Descrição</h3>
           <h5>{game.isJogoDoAno}</h5>
           {/* {game.plataformas} */}
           <Card.Text>{game.descricao}</Card.Text>

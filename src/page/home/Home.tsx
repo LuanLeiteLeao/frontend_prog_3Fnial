@@ -4,6 +4,8 @@ import { CardGames } from "../../components/cardGames/cardGames";
 
 import "./styles.css";
 class Home extends React.Component {
+  
+
   render(): JSX.Element {
     return (
       <>

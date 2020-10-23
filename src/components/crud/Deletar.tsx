@@ -86,7 +86,8 @@ export abstract class Deletar<IEntidade> extends React.Component<
           <Button variant="danger" onClick={this.deletarRegistro}>
             Deletar <BsFillTrashFill />
           </Button>{" "}
-          <Link to="/">
+          
+          <Link to={`/${this.getNomeEntidade().toLowerCase()}/listar`}>
             <Button variant="info">
               Cancelar <MdCancel />
             </Button>{" "}

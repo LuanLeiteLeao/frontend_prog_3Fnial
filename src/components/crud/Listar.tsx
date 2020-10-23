@@ -50,7 +50,7 @@ export abstract class Listar<Entidade> extends React.Component<
           </Link>
         </td>
         <td>
-          <Link to={"/" + this.getEntidadeNome() + "/renomear/" + id}>
+          <Link to={"/" + this.getEntidadeNome() + "/editar/" + id}>
             <FaPencilAlt />
           </Link>
         </td>
